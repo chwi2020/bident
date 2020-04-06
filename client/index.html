@@ -1,0 +1,63 @@
+<html lang=”en”>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="white"/>
+        <title>BIdent Building Identification</title>
+        <link rel="manifest" href="manifest.json">        
+        <link rel="stylesheet" href="style.css">   
+        <link rel="shortcut icon" type="image/x-icon" href="images/icons/favicon.ico">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300&display=swap" rel="stylesheet"> 
+        <script
+			  src="https://code.jquery.com/jquery-3.4.1.js"
+			  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+			  crossorigin="anonymous"></script>  
+    </head>
+    
+    <body>     
+        <header class="page-header">
+            <h1>BIdent Building Identification</h1>
+        </header>
+
+        <div id="detail-dialog">
+            <img id="details-image"></img>
+            <div id="details-name">
+                <span id="details-name-text" class="details-text"></span>
+            </div>  
+            <div id="details-parent" class="details-text">
+                <img src="images/icons/parent.svg" class="details-icon">
+                Teil von:
+                <span id="details-parent-text" class="details-text"></span></div>            
+            <div id="details-description" class="details-text">
+                <img src="images/icons/description.svg" class="details-icon">
+                Beschreibung:
+                <span id="details-description-text" class="details-text"></span></div>            
+            <div id="details-certainty" class="details-text">
+                <img src="images/icons/certainty.svg" class="details-icon">
+                Identifikationssicherheit:
+                <span id="details-certainty-text" class="details-text"></span></div>
+            <div id="details-error" class="details-text">
+                <img src="images/icons/description.svg" class="details-icon">
+                <span id="details-error-text" class="details-text"></span>
+                </div>
+            <div id="details-confirm" onclick="closeDetails()">
+                <btn>OK</btn>
+                </div>
+        </div>
+        
+        <main id="camera">             
+            <canvas id="camera-sensor"></canvas>                        
+            <video id="camera-view" autoplay playsinline></video>                                                       
+            <button id="camera-trigger">                
+                <img src="images/icons/camera.svg"/>                    
+            </button>                            
+            <h2 id="trigger-text">Identifizieren</h2>                
+            
+        </main>           
+        
+        <script src="camera.js"></script>      
+        <script src="network.js"></script>
+        <script src="app.js"></script>  
+    </body>
+</html>
